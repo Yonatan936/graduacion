@@ -18,7 +18,7 @@
                     <label for ="">password</label>
                     <input type ="password" class="form control" name="password">
                 </div>
-                <button class="btn_primary">Enviar Datos </button>
+                <a class="btn btn-primary btn-lg" href="#" role="button">Enviar Datos</a>
             </form>
         </div>
 </section>
