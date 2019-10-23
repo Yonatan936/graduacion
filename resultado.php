@@ -7,16 +7,14 @@
 </head>
 <body>
     
-    <p  
-        class="text-info">
+    <p class="text-info">
         <?php 
-         $usuario=$_Get["usuario"];
+            $usuario=$_Get["usuario"];
             echo $usuario;
          ?>
 
     </p>
-    <p 
-        class="text-info">
+    <p class="text-info">
 
         <?php 
             $password=$_Get["password"];
