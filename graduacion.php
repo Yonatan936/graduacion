@@ -8,7 +8,7 @@
 <body>
 <section class ="contrainer">
 <section class ="row">
-        <div class="col-md6">
+        <div class="col-md-6">
             <form action ="resultado.php" method="GET">
               <div class="form-group">
                     <label for ="">Usuario</label>

@@ -9,7 +9,7 @@
     
     <p class="text-info">
         <?php 
-            $usuario=$_Get["usuario"];
+            $usuario=$_GET["usuario"];
             echo $usuario;
          ?>
 
@@ -17,7 +17,7 @@
     <p class="text-info">
 
         <?php 
-            $password=$_Get["password"];
+            $password=$_GET["password"];
             echo $password;
         ?>
     </p>
