@@ -15,7 +15,7 @@
 
     </p>
     <p class="text-info">
-
+    
         <?php 
             $password=$_GET["password"];
             echo $password;
