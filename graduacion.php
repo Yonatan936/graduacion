@@ -28,7 +28,7 @@
             <div class="modal-body">
             <section class ="row">
             <div class="col-md-6">
-            <form action ="resultado.php" method="GET">
+            <form action ="resultado.php" method="POST">
                         <div class="form-group ">
                             <label for="nombre">Nombre</label>
                             <input type="text" class="form-control" name="usuario">

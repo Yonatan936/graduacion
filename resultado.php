@@ -10,7 +10,7 @@
             <form action ="graduacion.php" method="GET">
     <p class="text-info">
         <?php 
-            $usuario=$_GET["usuario"];
+            $usuario=$_POST["usuario"];
             echo $usuario;
          ?>
 
@@ -18,7 +18,7 @@
     <p class="text-info">
 
         <?php 
-            $password=$_GET["password"];
+            $password=$_POST["password"];
             echo $password;
         ?>
     </p>
