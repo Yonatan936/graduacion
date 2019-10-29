@@ -12,7 +12,7 @@
 
 include("conexion.php");
 
-$sentencia="SELECT Nombre,password,email,lugares FROM usuarios";
+$sentencia="SELECT Nombre,contrasena,email,lugares FROM usuarios";
 $resultado=$conexionBD->query($sentencia);
 
 
@@ -26,20 +26,20 @@ while($fila=mysqli_fetch_assoc($resultado)){
 echo "<table class=\"table table-striped\" >
 <tr>
 <th>Nombre</th>
-<th>Password</th>
+<th>contrasena</th>
 <th>Email</th>
 <th>Lugares</th>
 </tr>";
 
 foreach($usuarios AS $usuario){
 $Nombre=$usuario["Nombre"];
-$password=$usuario["password"];
+$contrasena=$usuario["contrasena"];
 $email=$usuario["email"];
 $lugares=$usuario["lugares"];
 
 echo "<tr>
         <td>$Nombre</td>
-        <td>$password</td>
+        <td>$contrasena</td>
         <td>$email</td>
         <td>$lugares</td>
 

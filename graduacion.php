@@ -30,7 +30,7 @@
             <div class="col-md-6">
             <form action ="resultado.php" method="POST">
                         <div class="form-group ">
-                            <label for="nombre">Nombre</label>
+                            <label for="usuario">Nombre</label>
                             <input type="text" class="form-control" name="usuario">
                         </div>
                         <div class="form-group">
