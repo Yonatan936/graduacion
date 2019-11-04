@@ -1,78 +1,61 @@
 <?php
-
-session_start();
-session_destroy();
+    session_start();
+    session_destroy();
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/all.min.css">
-
+    <script src="js/jquery-3.4.1.main.js"></script>
     <script>
-$function() {
-    $botn=$("button");
-    $botn.on=("clik",funtion(evento)){
-        evento.preventDefault();
-        var usuario =$('[name]="usuario"');
-        var contrasena=$('[name]="password"');
-         }
-    
-}
-    </script>
-    <style> 
-    .fa.pin {
-        display.none;
-    
-    }
-    </style>
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-</head>
-<body>
-<script>
-    $(function(){
-            $boton=$("button");
+        $(function(){
+            $boton = $("button";
             $boton.on("click",function(evento){
                 evento.preventDefault();
-                var usuario=$('[name="usuario" ');
-                var contrasena=$('[name="password" ');
+                var usuario = $('[name]="usuario"');
+
                 $.ajax({
-                        url:"resultado.php",
-                        method:"POST",
-                        data:{
-                            usuario.usuario,
-                            password.contrasena
-                        }
-                })
-                    .done(function)
+
+                });
             });
-    });
+        });
     </script>
-      
-    <form action ="resultado.php" method="GET">
-    <div class="modal-dialog text-center">
-        <div class="col-sm-8 main-section">
-            <div class="modal-content">
-                <div class="col-12 user-img">
-                    <img src="img/user.png" th:src="/img/user.png"/>
-                </div>
-                <form class="col-12" th:action="@{/login}" method="get">
-                    <div class="form-group" id="user-group">
-                        <input type="text" class="form-control" placeholder="Nombre de usuario" name="usuario"/>
+    <style>
+        .fa-spin
+        {
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <section class="row">
+            <div class="col-md-6">
+                <form action="resultado.php" method="POST">
+                    <div class="form-group">
+                        <label for="">Usuario</label>
+                        <input type="text" class="form-control" name = "usuario">
                     </div>
-                    <div class="form-group" id="contrasena-group">
-                        <input type="password" class="form-control" placeholder="contrasena" name="password"/>
+                    <div class="form-group">
+                        <label for="">Password</label>
+                        <input type="password" class="form-control" name="contrasena">
                     </div>
-                    <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i>  Ingresar </button>
+                    <button class="btn btn-primary">Envia datos</button>
+
+                    <i class="fas fa-cog fa-spin"></i>
+
                 </form>
             </div>
-         </div>
-    </div>
-
+        </section>
+    </section>
+    
 </body>
 </html>

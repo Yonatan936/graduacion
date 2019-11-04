@@ -2,59 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lista</title>
+    <title>Lista de usuarios</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/all.min.css">
 </head>
 <body>
 <?php
+    include("conexion.php");
+    $sentencia = "SELECT nombre,contrasena,email,lugares FROM usuarios";
+    $resultado = $conexionBD->query($sentencia);
 
-include("conexion.php");
+    $usuarios = array();
 
-$sentencia="SELECT Nombre,contrasena,email,lugares FROM usuarios";
-$resultado=$conexionBD->query($sentencia);
+    while($fila = mysqli_fetch_assoc($resultado))
+    {
+        $usuarios[]=$fila;
+    }
+    
+    echo "<table class=\"table table-striped\">
+        <tr>
+            <th>nombre</th>
+            <th>password</th>
+            <th>Email</th>
+            <th>Lugares</th>
+        </tr>";
 
+    foreach($usuarios AS $usuario)
+    {
+        $nombre = $usuario["nombre"];
+        $password = $usuario["contrasena"];
+        $email = $usuario["email"];
+        $lugares = $usuario["lugares"];
+       #
+        
 
-$usuarios=array();
+        echo "<tr>
+            <td>$nombre</td>
+            <td>$password</td>
+            <td>$email</td>
+            <td>$lugares</td>
+        </tr>";
+    }
+    echo"</table>"
 
-
-while($fila=mysqli_fetch_assoc($resultado)){
-    $usuarios[]=$fila;
-}
-
-echo "<table class=\"table table-striped\" >
-<tr>
-<th>Nombre</th>
-<th>contrasena</th>
-<th>Email</th>
-<th>Lugares</th>
-</tr>";
-
-foreach($usuarios AS $usuario){
-$Nombre=$usuario["Nombre"];
-$contrasena=$usuario["contrasena"];
-$email=$usuario["email"];
-$lugares=$usuario["lugares"];
-
-echo "<tr>
-        <td>$Nombre</td>
-        <td>$contrasena</td>
-        <td>$email</td>
-        <td>$lugares</td>
-
-    </tr>";
-
-}
-
-echo  "</table>";
-//var_dump($usuarios);
-
+    #var_dump($resultado);
 ?>
+    
 </body>
 </html>
-
-
-
 
 
