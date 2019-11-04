@@ -12,10 +12,10 @@
 
 include ("conexion.php");
 $usuario=$_POST["usuario"];
-$contrasena =hash ("whirlpool",$_POST["contrasena"]);
+$password =hash ("whirlpool",$_POST["password"]);
 $statement = "SELECT Nombre,contrasena
                  FROM usuarios
-                 WHERE contrasena ='$contrasena'
+                 WHERE contrasena ='$password'
                  AND Nombre='$usuario'";
         $resultado =$conexionBD->query($statement);
 

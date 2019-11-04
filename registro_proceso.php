@@ -2,12 +2,12 @@
     include("conexion.php");
     $usuario=$_POST["usuario"];
 
-    $contrasena=hash ("whirlpool",$_POST["contrasena"]);
+    $password=hash ("whirlpool",$_POST["password"]);
    
     $email=$_POST["email"];
 
     $statement = "INSERT INTO usuarios(nombre,contrasena,email)
-    VALUES ('$usuario', '$contrasena', '$email')";
+    VALUES ('$usuario', '$password', '$email')";
         
     //echo $statement;
         $resultado=$conexionBD->query($statement);

@@ -22,7 +22,7 @@
 
                 <div class ="form-group">
                     <label for ="">Contraseña</label>
-                    <input type ="password" class="form-control"name ="contrasena">
+                    <input type ="password" class="form-control" name ="password">
                 </div> 
                 <div class ="form-group">
                     <label for ="">Email</label>
